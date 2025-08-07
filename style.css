@@ -1,0 +1,30 @@
+/* Estilos Gerais */
+body { font-family: Arial, sans-serif; margin: 0; background-color: #f0f2f5; color: #333; }
+header { background-color: #fff; padding: 2rem; text-align: center; border-bottom: 1px solid #ddd; }
+footer { text-align: center; padding: 1rem; margin-top: 2rem; color: #777; }
+main { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+a { color: #007bff; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.link-voltar { display: inline-block; margin-top: 1rem; }
+
+/* Página Principal - Perfis */
+.container-perfis { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+.card-perfil { background: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center; padding: 1.5rem; transition: transform 0.2s; width: 220px; }
+.card-perfil:hover { transform: translateY(-5px); }
+.card-perfil img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid #eee; }
+.card-perfil h3 { margin: 1rem 0 0.5rem; }
+.card-perfil p { color: #666; font-size: 0.9rem; }
+
+/* Página de Portfólio Individual */
+.projeto-listado { background: #fff; padding: 1.5rem; margin-bottom: 1.5rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+.btn-ver-mais { display: inline-block; margin-top: 1rem; background-color: #007bff; color: white; padding: 0.5rem 1rem; border-radius: 5px; }
+.btn-ver-mais:hover { background-color: #0056b3; text-decoration: none; }
+
+/* Página de Detalhes do Projeto e Comentários */
+.detalhes-projeto { background: #fff; padding: 1.5rem; border-radius: 8px; }
+.area-comentarios { margin-top: 2rem; }
+.lista-comentarios .comentario { background-color: #fff; padding: 10px; border-radius: 5px; margin-bottom: 10px; border-left: 3px solid #007BFF; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+.form-comentario { display: flex; margin-top: 15px; }
+.form-comentario input { flex-grow: 1; padding: 10px; border: 1px solid #ccc; border-radius: 5px 0 0 5px; }
+.form-comentario button { padding: 10px 15px; border: none; background-color: #28a745; color: white; cursor: pointer; border-radius: 0 5px 5px 0; }
+.form-comentario button:hover { background-color: #218838; }

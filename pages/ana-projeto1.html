@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes - Calculadora Web</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<!-- Usamos um data-attribute para dar um ID único a este projeto para o JS -->
+<body data-project-id="ana-projeto-calculadora">
+    <header>
+        <h1>Projeto: Calculadora Web</h1>
+        <a href="ana-portfolio.html" class="link-voltar">← Voltar para o portfólio da Ana</a>
+    </header>
+
+    <main>
+        <section class="detalhes-projeto">
+            <h2>Descrição</h2>
+            <p>Este projeto foi desenvolvido com o objetivo de aprimorar as habilidades em JavaScript puro, focando na manipulação do DOM e na lógica de eventos. A calculadora suporta as quatro operações básicas.</p>
+            <p><strong>Tecnologias:</strong> HTML, CSS, JavaScript.</p>
+        </section>
+
+        <!-- ÁREA DE COMENTÁRIOS / INFORMAÇÕES -->
+        <section class="area-comentarios">
+            <h3>Informações Adicionais / Comentários</h3>
+            
+            <div id="lista-comentarios" class="lista-comentarios">
+                <!-- Comentários carregados pelo JS aparecerão aqui -->
+            </div>
+            
+            <div class="form-comentario">
+                <input type="text" id="input-comentario" placeholder="Adicionar uma informação...">
+                <button id="btn-adicionar">Adicionar</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 - Projeto de Portfólios</p>
+    </footer>
+
+    <!-- Script específico para esta página -->
+    <script src="scripts/project.js"></script>
+</body>
+</html>
