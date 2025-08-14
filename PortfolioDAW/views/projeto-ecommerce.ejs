@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto: Website de E-commerce</title>
+    <!-- O caminho para o CSS continua sendo ../style.css -->
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="#">Projetos</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Detalhes do Projeto -->
+        <div class="projeto-detalhe">
+            <img src="#" alt="Imagem de capa do projeto">
+            <div class="projeto-detalhe-texto">
+                <h1>Website de E-commerce</h1>
+                <p class="projeto-criador">Criado por <a href="perfil-ana.html">Ana Silva</a></p>
+                <div class="tags">
+                    <span>React</span>
+                    <span>Node.js</span>
+                    <span>UI/UX</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Container das Abas (Tabs) -->
+        <div class="tabs-container">
+            <div class="tab-nav">
+                <button class="tab-button active" data-tab="sobre">Sobre o Projeto</button>
+                <button class="tab-button" data-tab="comentarios">Comentários (3)</button>
+            </div>
+
+            <div class="tab-content">
+                <!-- Conteúdo da Aba "Sobre" -->
+                <div id="sobre" class="tab-pane active">
+                    <h3>Descrição</h3>
+                    <p>Este projeto é uma plataforma de vendas online completa, construída com as tecnologias mais modernas do mercado. O front-end foi desenvolvido em React para uma experiência de usuário rápida e interativa, enquanto o back-end robusto utiliza Node.js com Express para gerenciar produtos, usuários e pedidos.</p>
+                    <h3>Tecnologias Utilizadas</h3>
+                    <ul>
+                        <li>React.js para a interface do usuário.</li>
+                        <li>Node.js e Express para o servidor da API.</li>
+                        <li>MongoDB como banco de dados NoSQL.</li>
+                        <li>Autenticação de usuários com JSON Web Tokens (JWT).</li>
+                        <li>Integração com API de pagamento Stripe.</li>
+                    </ul>
+                </div>
+
+                <!-- Conteúdo da Aba "Comentários" -->
+                <div id="comentarios" class="tab-pane">
+                    <div class="comentario">
+                        <p><strong>João Costa:</strong> Projeto incrível, Ana! O design está muito limpo. Parabéns!</p>
+                        <small>Curtir (5) &middot; Responder</small>
+                    </div>
+                    <div class="comentario">
+                        <p><strong>Usuário Anônimo:</strong> Como você fez a parte de autenticação? Ficou muito fluida.</p>
+                        <small>Curtir (2) &middot; Responder</small>
+                    </div>
+                    <div class="comentario">
+                        <p><strong>Maria Santos:</strong> Adorei a paleta de cores. Inspira confiança!</p>
+                        <small>Curtir (8) &middot; Responder</small>
+                    </div>
+                    <form class="comentario-form">
+                        <textarea placeholder="Deixe seu comentário..."></textarea>
+                        <button type="submit">Comentar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 - Projeto de Portfólios</p>
+    </footer>
+
+    <script src="../main.js"></script>
+
+</body>
+</html>
