@@ -1,0 +1,70 @@
+<!-- views/perfil.ejs -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <!-- O título da página agora é dinâmico! -->
+    <title>Portfólio de <%= perfil.nome %></title>
+</head>
+<body>
+    <header>
+        <nav>
+            <!-- Este link leva de volta para a página inicial -->
+            <a href="/">← Voltar para a equipe</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="perfil-detalhe">
+            <img src="<%= perfil.imagem %>" alt="Foto de <%= perfil.nome %>">
+            <h1><%= perfil.nome %></h1>
+            <h2><%= perfil.cargo %></h2>
+            
+            <!-- Aqui você pode adicionar mais informações, como bio, projetos, etc. -->
+            <p>Aqui virão mais detalhes e a lista de projetos desta pessoa.</p>
+        </section>
+
+        <section class="lista-projetos">
+            <h2>Projetos</h2>
+
+            <%# Verificamos se a pessoa tem projetos antes de tentar listá-los %>
+            <% if (perfil.projetos && perfil.projetos.length > 0) { %>
+        
+                <%# Fazemos um loop em cada projeto da pessoa %>
+                <% perfil.projetos.forEach(function(projeto) { %>
+
+                <article class="projeto-card">
+                    <h3><%= projeto.titulo %></h3>
+                    <p><%= projeto.descricao %></p>
+                    <div class="tags">
+                        <%# Um segundo loop, agora para as tecnologias de cada projeto %>
+                        <% projeto.tecnologias.forEach(function(tech) { %>
+                            <span><%= tech %></span>
+                        <% }); %>
+                    </div>
+                
+                    <%# Este link já aponta para a rota que criaremos no futuro! %>
+                    <a href="/perfil/<%= perfil.id %>/projeto/<%= projeto.id %>" class="btn-ver-mais">
+                        Ver Detalhes
+                    </a>
+                </article>
+            <% }); %>
+
+            <% } else { %>
+                <%# Mensagem para caso a pessoa não tenha nenhum projeto cadastrado %>
+                p>Nenhum projeto cadastrado no momento.</p>
+            <% } %>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2023 - Projeto de Portfólios</p>
+    </footer>
+
+</body>
+</html>

@@ -30,31 +30,30 @@
         </div>
 
         <section id="equipe">
-            
-            <a href="./pages/perfil-ana.html" class="perfil-link">
-                <article class="perfil">
-                    <img src="#" alt="Foto da Ana">
-                    <h2>Ana Silva</h2>
-                    <p>Desenvolvedora Front-End</p>
-                </article>
-            </a>
-
-            <article class="perfil">
-                <img src="#" alt="Foto do João">
-                <h2>João Costa</h2>
-                <p>Desenvolvedor Full-Stack</p>
-            </article>
-
-            <article class="perfil">
-                <img src="#" alt="Foto do Usuário">
-                <h2>Seu Nome</h2>
-                <p>Aspirante a Desenvolvedor</p>
-            </article>
+        
+            <%# Loop para criar um card para cada perfil %>
+            <% if (typeof perfis !=='undefined' && perfis.length> 0) { %>
+                <% perfis.forEach(function(perfil) { %>
+        
+                    <a href="/perfil/<%= perfil.id %>" class="perfil-link">
+                        <article class="perfil">
+                            <img src="<%= perfil.imagem %>" alt="Foto de <%= perfil.nome %>">
+                            <h2><%= perfil.nome %></h2>
+                            <p><%= perfil.cargo %></p>
+                        </article>
+                    </a>
+  
+                <% }); %>
+            <% } else { %>
+                <p>Nenhum perfil para exibir no momento.</p>                                
+            <% } %>
+        
         </section>
 
         <section id="cadastro">
-            <button type="button">Cadastrar Pessoa</button>
+            <a href="/cadastro" class="btn-principal">Cadastrar Pessoa</a>       
         </section>
+        
     </main>
 
     <footer>

@@ -1,0 +1,68 @@
+<!-- views/projeto.ejs -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto: <%= projeto.titulo %></title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Início</a></li>
+                <!-- Este link volta para o portfólio da pessoa certa! -->
+                <li><a href="/perfil/<%= perfil.id %>">Portfólio de <%= perfil.nome %></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Detalhes do Projeto -->
+        <div class="projeto-detalhe">
+            <img src="/imagens/placeholder.jpg" alt="Imagem de capa do projeto"> <!-- Imagem de placeholder -->
+            <div class="projeto-detalhe-texto">
+                <h1><%= projeto.titulo %></h1>
+                <p class="projeto-criador">
+                    Criado por <a href="/perfil/<%= perfil.id %>"><%= perfil.nome %></a>
+                </p>
+                <div class="tags">
+                    <% projeto.tecnologias.forEach(function(tech) { %>
+                        <span><%= tech %></span>
+                    <% }); %>
+                </div>
+            </div>
+        </div>
+
+        <!-- Container das Abas (Tabs) -->
+        <div class="tabs-container">
+            <!-- Por enquanto, a parte de comentários será estática. Faremos ela funcionar no futuro! -->
+            <div class="tab-nav">
+                <button class="tab-button active">Sobre o Projeto</button>
+                <button class="tab-button">Comentários</button>
+            </div>
+
+            <div class="tab-content">
+                <div class="tab-pane active">
+                    <h3>Descrição</h3>
+                    <p><%= projeto.descricao %></p>
+                    <h3>Tecnologias Utilizadas</h3>
+                    <ul>
+                        <% projeto.tecnologias.forEach(function(tech) { %>
+                            <li><%= tech %></li>
+                        <% }); %>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 - Projeto de Portfólios</p>
+    </footer>
+
+</body>
+</html>
